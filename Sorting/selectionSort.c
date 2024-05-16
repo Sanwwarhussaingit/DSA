@@ -1,23 +1,24 @@
 #include <stdio.h>
 void main()
 {
-    int arr[5] = {7, 8, 3, 1, 2};
-    int temp = 0;
-    int smallest = 0;
+
+    int arr[5] = {22, 13, 64, 12, 33};
     for (int i = 0; i < 5; i++)
     {
-        smallest = i;
+        int smallIndex = i;
         for (int j = i + 1; j < 5; j++)
         {
-            if (arr[smallest] > arr[j])
+            if (arr[smallIndex] > arr[j])
             {
-                smallest = j;
+                smallIndex = j;
             }
         }
-        temp = arr[smallest];
-        arr[smallest] = arr[i];
-        arr[i] = temp;
+       
+        int temp = arr[i];
+        arr[i] = arr[smallIndex];
+        arr[smallIndex] = temp;
     }
+
     for (int i = 0; i < 5; i++)
     {
         printf("%d ", arr[i]);
