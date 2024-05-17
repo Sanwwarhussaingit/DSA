@@ -6,9 +6,9 @@ void swap(int* a, int* b) {
 }
 void main()
 {
-    
+    int k=2;
     int arr[]={4,2,7,3,1};
-    for(int i=0;i<5;i++)
+    for(int i=0;i<k;i++)
     {
         int s=i;
         for(int j=i;j<5;j++)
@@ -21,7 +21,7 @@ void main()
         swap(&arr[i],&arr[s]);
 
     }
-    for(int i=0;i<5;i++){
+    for(int i=0;i<k;i++){
         printf("%d ",arr[i]);
     }
 }
